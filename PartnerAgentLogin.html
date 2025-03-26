@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partner Agent Login</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column; /* Align elements vertically */
+      min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+      overflow: hidden; /* Prevents any content from overflowing */
+    }
+
+    /* Background Video */
+    .background-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.4;
+      object-fit: cover; /* Make the video cover the whole screen */
+      z-index: -1; /* Ensures the video stays behind the content */
+    }
+
+    /* Adjust the content section */
+    .content {
+      flex: 1; /* This allows the content to take up the available space */
+      position: relative;
+      z-index: 1; /* Keeps the content in front of the background */
+    }
+
+    footer {
+      margin-top: auto; /* Push the footer to the bottom */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video autoplay muted loop class="background-video">
+    <source src="https://media.istockphoto.com/id/1398589997/video/modern-bedroom-in-a-luxury-villa.mp4?s=mp4-640x640-is&k=20&c=W7ow5F2pTNZGyhAS1xHd1LvDaivsiVez4_Am0FMLSDk=" type="video/mp4">
+    <!-- Fallback message in case video can't be loaded -->
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Content -->
+  <div class="content">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="https://www.pattinson.co.uk/" style="color: rgb(42, 61, 165);">Home</a>
+        <a class="nav-item nav-link" href="https://www.pattinson.co.uk/buy" style="color: red;">Buy</a>
+        <a class="nav-item nav-link" href="https://www.pattinson.co.uk/sell" style="color: purple;">Sell</a>
+        <a class="nav-item nav-link" href="https://www.pattinson.co.uk/rent" style="color: rgb(99, 6, 6);">Rent</a>
+        <a class="nav-item nav-link" href="https://www.pattinson.co.uk/auction" style="color: rgb(209, 168, 70);">Auction</a>
+        <a class="nav-item nav-link" href="https://www.pattinson.co.uk/commercial" style="color: rgb(123, 9, 199);">Commercial</a>
+        <a class="nav-item nav-link" href="https://www.pattinson.co.uk/about/branch-finder" style="color: rgb(0, 0, 0);">About</a>
+      </div>
+    </nav>
+
+    <!-- Logo Section -->
+    <div class="container text-center border p-3"><br>
+      <img src="htmlauction logo.png" alt="Pattinson" class="img-fluid" >
+    </div><br>
+    
+    <div class="container mb-3 border border-light rounded p-3">
+      <P style="text-align: center; font-size: 18px; font-weight: bold; color: rgb(0, 0, 0);" >Partner Agent Login</P>
+      <div class="row">
+        <div class="col-6 ">
+          <div class="mb-6">
+            <form action="/login" method="POST">
+              <!-- Username field with icon -->
+              <div class="form-group">
+                <label style="color: white;" for="username">Login</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                  </div>
+                  <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
+                </div>
+              </div>
+              <!-- Password field with padlock icon -->
+              <div class="form-group">
+                <label style="color: white;" for="password">Password</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                  </div>
+                  <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+              </div>
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </form>
+            <!-- Forgot password link -->
+            <div class="form-group text-right">
+              <a href="#" class="text-muted" style="font-weight: bold;">Forgot password?</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2 with centered image -->
+        <div class="col-6">
+          <div class="mb-6"><br>
+            <h6 style="text-align: center; font-weight: 600;" >Not registered one of our valued Partner Agents yet?</h6>
+            <div class="form-group">
+              <form>
+                <button type="Register" class="btn btn-primary btn-block">Click here!</button>
+              </form>
+              <!-- Centered key image -->
+            <div class="d-flex justify-content-center">
+              <img src="Key image.png" alt="Register Key" class="img-fluid" style="max-width: 80%; margin-top: 15px;">
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <footer>
+      <p><a class="mr-4" href="/about/terms-of-use">Terms of use   </a> 
+         <a class="mr-4" href="/about/privacy-policy-and-notice">Privacy Policy &amp; Notice</a> 
+         <a class="mr-4" href="/about/careers">Careers</a></p>
+    </footer> 
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
