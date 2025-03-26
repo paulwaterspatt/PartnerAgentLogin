@@ -45,8 +45,7 @@
   <!-- Background Video -->
   <video autoplay muted loop class="background-video">
     <source src="https://media.istockphoto.com/id/1398589997/video/modern-bedroom-in-a-luxury-villa.mp4?s=mp4-640x640-is&k=20&c=W7ow5F2pTNZGyhAS1xHd1LvDaivsiVez4_Am0FMLSDk=" type="video/mp4">
-    <!-- Fallback message in case video can't be loaded -->
-    Your browser does not support the video tag.
+     Your browser does not support the video tag.
   </video>
 
   <!-- Content -->
@@ -55,12 +54,12 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="navbar-nav">
         <a class="nav-item nav-link" href="https://www.pattinson.co.uk/" style="color: rgb(42, 61, 165);">Home</a>
-        <a class="nav-item nav-link" href="https://www.pattinson.co.uk/buy" style="color: rgb(42, 61, 165);">Buy</a>
-        <a class="nav-item nav-link" href="https://www.pattinson.co.uk/sell" style="color: rgb(42, 61, 165);">Sell</a>
+        <a class="nav-item nav-link" href="https://www.pattinson.co.uk/buy" style="color: red;">Buy</a>
+        <a class="nav-item nav-link" href="https://www.pattinson.co.uk/sell" style="color: purple;">Sell</a>
         <a class="nav-item nav-link" href="https://www.pattinson.co.uk/rent" style="color: rgb(99, 6, 6);">Rent</a>
         <a class="nav-item nav-link" href="https://www.pattinson.co.uk/auction" style="color: rgb(209, 168, 70);">Auction</a>
         <a class="nav-item nav-link" href="https://www.pattinson.co.uk/commercial" style="color: rgb(123, 9, 199);">Commercial</a>
-        <a class="nav-item nav-link" href="https://www.pattinson.co.uk/about/branch-finder" style="color: rgb(42, 61, 165);">About</a>
+        <a class="nav-item nav-link" href="https://www.pattinson.co.uk/about/branch-finder" style="color: rgb(0, 0, 0);">About</a>
       </div>
     </nav>
 
@@ -70,7 +69,7 @@
     </div><br>
     
     <div class="container mb-3 border border-light rounded p-3">
-      <P style="text-align: center; font-size: 18px; color: rgb(0, 0, 0);" >Partner Agent Login</P>
+      <P style="text-align: center; font-size: 18px; font-weight: bold; color: rgb(0, 0, 0);" >Partner Agent Login</P>
       <div class="row">
         <div class="col-6 ">
           <div class="mb-6">
@@ -100,7 +99,7 @@
             </form>
             <!-- Forgot password link -->
             <div class="form-group text-right">
-              <a href="#" class="text-muted" style="font-weight: bold;">Forgot password?</a>
+              <a href="#" class="text-muted" style="font-weight: bold;" data-toggle="modal" data-target="#passwordModal">Forgot password?</a>
             </div>
           </div>
         </div>
@@ -110,9 +109,8 @@
           <div class="mb-6"><br>
             <h6 style="text-align: center; font-weight: 600;" >Not registered one of our valued Partner Agents yet?</h6>
             <div class="form-group">
-              <form>
-                <button type="Register" class="btn btn-primary btn-block">Click here!</button>
-              </form>
+              <!-- Button to trigger modal -->
+              <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#registerModal">Click here!</button>
               <!-- Centered key image -->
             <div class="d-flex justify-content-center">
               <img src="Key image.png" alt="Register Key" class="img-fluid" style="max-width: 80%; margin-top: 15px;">
@@ -120,6 +118,71 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- New Registration Modal -->
+  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registerModalLabel">Partner Agent Registration</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Input fields for registration -->
+          <form action="/register" method="POST">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+              <label for="companyName">Company Name</label>
+              <input type="text" class="form-control" id="companyName" name="companyName" placeholder="Enter company name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </div>
+          </form>
+        </div>
+    </div>
+      </div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+  <div class="modal fade" id="passwordModal" tabindex="-1" role="dialog" aria-labelledby="passwordModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="passwordModalLabel">Forgot Password</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Input fields for forgot password -->
+          <form action="/password" method="POST">
+            <p>Please enter your email address below. You will receive an email to change your password</p>
+            <label for="email">Email Address</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-block">Send email</button>
+            </div>
+          </form>
+        </div>
+    </div>
       </div>
     </div>
   </div>
