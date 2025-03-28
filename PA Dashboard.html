@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partner Agent Dashboard</title>
+
+  <!-- CSS Links -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .logo {
+        text-align: center;
+    }
+
+    .sidebar {
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      background-color: black;
+      padding-top: 20px;
+    }
+
+    .sidebar a {
+      color: #fff;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .sidebar a:hover {
+      background-color: #575757;
+    }
+
+    .topnav {
+      background-color: #184e87;
+      color: #184e87;
+      padding: 10px 15px;
+      text-align: center;
+    }
+
+    .container {
+        margin-left: 250px;
+    }
+
+    .breadcrumb p {
+      margin-bottom: 0;
+    }
+
+    h6 {
+      margin-top: 0;
+    }
+
+    .mainBody {
+      border: 1px solid #dbd7d7;
+      padding: 15px;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+
+    .card-body {
+      border: 1px solid #dbd7d7;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table th, table td {
+      text-align: left;
+      padding: 5px;
+      border: 1px solid #ddd;
+    }
+
+    table tbody tr:nth-child(even) {
+      background-color: #e5e5e5;
+    }
+    table thead tr th {
+      background-color: #f3f3f3;
+    }
+
+    .contact-card {
+      width: 100%;
+      margin: 10px;
+    }
+
+    .contact-card img {
+      height: 100px;
+      object-fit: contain;
+    }
+
+    .contact-card .card-body {
+      text-align: center;
+    }
+
+    .contact-card .card-title {
+      font-size: 1.2rem;
+    }
+
+    .contact-card .card-text {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .contact-card .btn {
+      text-transform: uppercase;
+    }
+
+    .buttonlist {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .card-body {
+      background: linear-gradient(to bottom, #ffffff, #bcd5fa); /* Modify this as per your color choice */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Nav Bar -->
+  <div class="topnav">
+    <h3>Top Nav</h3>
+  </div>
+
+  <!-- Side Nav -->
+  <div class="sidebar">
+    <div class="logo">
+      <img src="htmlauction logo.png" alt="Logo">
+    </div>
+    <a href="PA Dashboard.html">
+      <i class="fas fa-home"></i> Dashboard
+    </a>
+    <a href="#">
+      <i class="fas fa-search"></i> Customers
+    </a>
+    <a href="#">
+      <i class="fas fa-heart"></i> My Properties
+    </a>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+    <div class="breadcrumb" style="font-size: 12px;">Overview > Dashboard</div>
+    <h3>Dashboard</h3>
+    <div class="Welcome">Welcome Paul Waters!</div><br>
+
+    <div class="mainBody">
+      <div class="row">
+        <!-- Left side: Grid stats and recent referrals table -->
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col p-1">
+              <div class="card-body">
+                <p>YTD Referrals</p>
+                <p style="font-weight: bold;">250</p>
+              </div>
+            </div>
+            <div class="col p-1">
+              <div class="card-body">
+                <p>Listings YTD</p>
+                <p style="font-weight: bold;">123</p>
+              </div>
+            </div>
+            <div class="col p-1">
+              <div class="card-body">
+                <p>Exchanges YTD</p>
+                <p style="font-weight: bold;">£29,500.00</p>
+              </div>
+            </div>
+            <div class="col p-1">
+              <div class="card-body">
+                <p>Units Sold YTD</p>
+                <p style="font-weight: bold;">62</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent referrals table -->
+          <div class="card-bodytable">
+            <p><strong>Recent Property Stats:</strong></p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Address</th>
+                  <th>Marketing Price</th>
+                  <th>Status</th>
+                  <th>Fee</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>123 Main Streeet</td>
+                  <td>£500,000</td>
+                  <td>For Sale</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>456 Elm Avenue</td>
+                  <td>£750,000</td>
+                  <td>Exchanged</td>
+                  <td>£4,500</td>
+                </tr>
+                <tr>
+                  <td>18 Wall Street</td>
+                  <td>£750,000</td>
+                  <td>Valuation Appointment</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>456 Elm Avenue</td>
+                  <td>£750,000</td>
+                  <td>For Sale</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- Buttons below the content -->
+      <div class="buttonlist">
+        <a href="propertylink.html" class="btn btn-primary">Refer Property</a>
+        <a href="propertylink.html" class="btn btn-warning">Refer Enquiry</a>
+        <a href="propertylink.html" class="btn btn-success">Refer Viewing</a>
+      </div>
+      <h6>Recent Listings</h6>
+      <div class="card" style="width: 18rem;">
+        <!-- Property Image -->
+        <img src="1st image.jpg" class="card-img-top" alt="Property Image">
+        <div class="card-body">
+            <!-- Property Title -->
+            <h5 class="card-title">Hedley Road, CR10,4ZT</h5>
+            
+            <!-- Property Description -->
+            <p class="card-text">3 bedroom Semi detached property with large rear garden...</p>
+            
+            <!-- Property Price -->
+            <p class="card-text"><strong>£220,000</strong></p>
+            
+            <!-- Button to View More -->
+            <a href="#" class="btn btn-primary">View Details</a>
+            </div>
+            </div>
+            </div>
+        <!-- Right side: Contact card -->
+        <div class="col-md-3">
+          <div class="card contact-card">
+            <img src="Kash.jpg" class="card-img-top" alt="Contact Image">
+            <div class="card-body" style="text-align: left;">
+              <h5 class="card-title">Kashif Awan</h5>
+              <p class="card-text">Business Development Manager</p>
+              <p class="card-text"><strong>Email:</strong> kashif.awan@pattinson.co.uk</p>
+              <p class="card-text"><strong>Phone:</strong> 07998356218</p><br>
+              <p class="card-text"><strong>Team Contacts</strong></p>
+              <ul style="list-style-type: none; padding: 0; margin: 0; display: flex;">
+                <li style="width: 50%;">Jason Nicolson <span>07971261987</span></li>
+                <li style="width: 50%;">Team Manager</li><br><br>
+              </ul>
+              <ul style="list-style-type: none; padding: 0; margin: 0; display: flex;">
+                <li style="width: 50%;">Faith Campbell <span>07976545676</span></li>
+                <li style="width: 50%;">Valuer</li>
+              </ul>
+              <ul style="list-style-type: none; padding: 0; margin: 0; display: flex;">
+                <li style="width: 50%;">Jacqui Stone <span>07988735261</span></li>
+                <li style="width: 50%;">Valuer</li>
+              </ul>
+              <ul style="list-style-type: none; padding: 0; margin: 0; display: flex;">
+                <li style="width: 50%;">Thomas Smith <span>0113876312</span></li>
+                <li style="width: 50%;">Negotiator</li>
+              </ul>
+              <ul style="list-style-type: none; padding: 0; margin: 0; display: flex;">
+                <li style="width: 50%;">Vicki Kilmartin <span>0113876442</span></li>
+                <li style="width: 50%;">Negotiator</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
